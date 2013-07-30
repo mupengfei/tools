@@ -1,4 +1,4 @@
-package com.framework.mail;
+package net.jesse.framework.mail;
 
 import java.util.Properties;
 

@@ -1,4 +1,4 @@
-package com.framework.file.zip;
+package net.jesse.framework.file.zip;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -93,10 +93,10 @@ public class ZipDemo {
 	}
 	
 	public static void main(String[] args) {
-		// e:/°Ù¶ÈÔÆ/Java±à³ÌË¼Ïë(µÚ4°æ).pdf
+		// e:/ï¿½Ù¶ï¿½ï¿½ï¿½/Javaï¿½ï¿½ï¿½Ë¼ï¿½ï¿½(ï¿½ï¿½4ï¿½ï¿½).pdf
 		
 		Date date1 = new Date();
-		new ZipDemo().goZip("d:/aa.zip", "d:/°¡.txt");
+		new ZipDemo().goZip("d:/aa.zip", "d:/ï¿½ï¿½.txt");
 		Date date2 = new Date();
 		System.out.println(date2.getTime() - date1.getTime());
 	}

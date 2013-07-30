@@ -1,4 +1,4 @@
-package com.framework.file;
+package net.jesse.framework.file;
  
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -106,7 +106,7 @@ public class DirectoryCope {
 
 	public static void main(String[] args) {
 		DirectoryCope d = new DirectoryCope();
-		d.copeDirectory(new File("d:/java.pdf"), new File("e:/°Ù¶ÈÔÆ/Java±à³ÌË¼Ïë(µÚ4°æ).pdf"));
+		d.copeDirectory(new File("d:/java.pdf"), new File("e:/ï¿½Ù¶ï¿½ï¿½ï¿½/Javaï¿½ï¿½ï¿½Ë¼ï¿½ï¿½(ï¿½ï¿½4ï¿½ï¿½).pdf"));
 		
 	}
 
