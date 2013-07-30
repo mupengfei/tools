@@ -93,10 +93,10 @@ public class ZipDemo {
 	}
 	
 	public static void main(String[] args) {
-		// e:/�ٶ���/Java���˼��(��4��).pdf
+		// e:/java/Java编译思想.pdf
 		
 		Date date1 = new Date();
-		new ZipDemo().goZip("d:/aa.zip", "d:/��.txt");
+		new ZipDemo().goZip("d:/aa.zip", "d:/aa.txt");
 		Date date2 = new Date();
 		System.out.println(date2.getTime() - date1.getTime());
 	}

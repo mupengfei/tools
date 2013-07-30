@@ -5,25 +5,25 @@ import java.util.Set;
 
 
 public class Sets {
-	//Á½¸öSetºÏ²¢
+	//ä¸¤ä¸ªSetåˆå¹¶
 	public static <T> Set<T> union(Set<T> a,Set<T> b){
 		Set<T> result = new HashSet<T>(a);
 		result.addAll(b);
 		return result;
 	}
-	//Á½¸öSet¹²ÓĞ²¿·Ö
+	//ä¸¤ä¸ªSetå…±æœ‰éƒ¨åˆ†
 	public static <T> Set<T> intersection(Set<T> a,Set<T> b){
 		Set<T> result = new HashSet<T>(a);
 		result.retainAll(b);
 		return result;
 	}
-	//´ÓsupersetÒÆ³ısubset
+	//ä»supersetç§»é™¤subset
 	public static <T> Set<T> difference(Set<T> superset,Set<T> subset){
 		Set<T> result = new HashSet<T>(superset);
 		result.removeAll(subset);
 		return result;
 	}
-	//·µ»Ø³ı½»¼¯ÒÔÍâµÄËùÓĞÄÚÈİ
+	//è¿”å›é™¤äº¤é›†ä»¥å¤–çš„æ‰€æœ‰å†…å®¹
 	public static <T> Set<T> complement(Set<T> a,Set<T> b){
 		return difference(union(a,b),intersection(a,b));
 	}

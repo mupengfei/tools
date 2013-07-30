@@ -106,7 +106,7 @@ public class DirectoryCope {
 
 	public static void main(String[] args) {
 		DirectoryCope d = new DirectoryCope();
-		d.copeDirectory(new File("d:/java.pdf"), new File("e:/�ٶ���/Java���˼��(��4��).pdf"));
+		d.copeDirectory(new File("d:/java.pdf"), new File("e:/java/Java编译思想.pdf"));
 		
 	}
 

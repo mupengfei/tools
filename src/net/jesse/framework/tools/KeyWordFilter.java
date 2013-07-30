@@ -1,4 +1,4 @@
-package net.jesse.framework.tools;
+﻿package net.jesse.framework.tools;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class KeyWordFilter {
 	private static Pattern pattern = null;
 
-	// ��words.properties��ʼ��������ʽ�ַ�
+	// ??words.properties???????????????
 	private static void initPattern() {
 		StringBuffer patternBuf = new StringBuffer("");
 		try {
@@ -47,7 +47,7 @@ public class KeyWordFilter {
 		SimpleDateFormat formatter = new SimpleDateFormat(
 				"EEE, d MMM yyyy HH:mm:ss:SSS Z");
 		System.out.println("start:" + formatter.format(d1));
-		System.out.println("��" + str.length() + "���ַ�鵽"
+		System.out.println("开始长度" + str.length() + "过滤后"
 				+ KeyWordFilter.doFilter(str));
 		Date d2 = new Date();
 		System.out.println("end:" + formatter.format(d2));
