@@ -2,12 +2,13 @@ package net.jesse.framework.file;
  
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
+import java.io.IOException;
 import java.io.StringBufferInputStream;
+import java.nio.channels.FileChannel;
+import java.util.Date;
 public class DirectoryCope {
 
 	/**
@@ -41,12 +42,12 @@ public class DirectoryCope {
 					copeDirectory(new File(target.getPath() + File.separator
 							+ file.getName()), file);
 				} else {
-					copeFile(new File(target.getPath() + File.separator
+					copeFile_New(new File(target.getPath() + File.separator
 							+ file.getName()), file);
 				}
 			}
 		} else {
-			copeFile(target, src);
+			copeFile_New(target, src);
 		}
 	}
 
@@ -103,11 +104,24 @@ public class DirectoryCope {
 			}
 		}
 	}
-
+	
+	public void copeFile_New(File target, File src) {
+		try {
+			FileChannel srcfc = new FileInputStream(src).getChannel();
+			FileChannel targetfc = new FileOutputStream(target).getChannel();
+			srcfc.transferTo(0, srcfc.size(), targetfc);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
 		DirectoryCope d = new DirectoryCope();
-		d.copeDirectory(new File("d:/java.pdf"), new File("e:/java/Java编译思想.pdf"));
-		
+		Date d1 = new Date();
+		d.copeDirectory(new File("d:/java.pdf"), new File("D:/百度云/图书/Java/Java编程思想(第4版).pdf"));
+		Date d2 = new Date();
+		System.out.println((d2.getTime() - d1.getTime()));
 	}
 
 }
